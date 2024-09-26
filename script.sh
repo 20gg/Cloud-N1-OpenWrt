@@ -19,3 +19,6 @@ sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/conf
 git clone https://github.com/ophub/luci-app-amlogic.git  package-temp/luci-app-amlogic
 mv -f package-temp/luci-app-amlogic/luci-app-amlogic package/lean/
 rm -rf package-temp
+
+sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/scyx/g' package/base-files/files/bin/config_generate
